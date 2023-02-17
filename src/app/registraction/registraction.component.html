@@ -1,0 +1,107 @@
+<mat-card>
+  <mat-card-content>
+    <mat-card-header style="justify-content:center">
+      <h1><strong>Registration</strong></h1>
+    </mat-card-header>
+   
+        <h2 style="text-align: center;">Contact Information</h2>
+      
+    <form class="example-form" [formGroup]="registractionform">
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Mobile Number</mat-label>
+          <input matInput formControlName="MobNo" placeholder="" />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="EID" placeholder="" />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Full Name</mat-label>
+          <input matInput formControlName="Fname" placeholder="" />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Set Password</mat-label>
+          <input
+            matInput
+            type="password"
+            formControlName="password"
+            placeholder=""
+          />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Confirm Password</mat-label>
+          <input
+            matInput
+            type="password"
+            formControlName="ConPass"
+            placeholder=""
+          />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field appearance="fill">
+          <mat-label>Date of Graduation</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="DOB" />
+          <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
+          <mat-datepicker-toggle
+            matIconSuffix
+            [for]="picker"
+          ></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <div formArrayName="degreeform">
+          <div *ngFor="let skill of degreeform.controls; let i = index">
+            <div [formGroupName]="i">
+              <mat-form-field class="example-full-width">
+                Degree {{ i + 1 }}:
+                <input matInput formControlName="degree" />
+              </mat-form-field>
+            </div>
+          </div>
+          <button mat-raised-button color="primary" (click)="addskills()">
+            Add Degree
+          </button>
+        </div>
+      </div>
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>Online Consult Fee</mat-label>
+          <input matInput formControlName="OnConFee" placeholder="" />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+        <mat-form-field class="example-full-width">
+          <mat-label>In Person Consult Fee</mat-label>
+          <input matInput formControlName="InConFee" placeholder="" />
+        </mat-form-field>
+      </div>
+
+      <div style="text-align: center" class="example-button-row bottom-one">
+      <section>
+        <div class="example-button-row">
+          <button mat-raised-button color="primary" (click)="proceed()">
+            Submit
+          </button>
+        </div>
+      </section>
+    </div>
+    </form>
+  </mat-card-content>
+</mat-card>

@@ -1,0 +1,93 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    },
+    {
+      "MobNo": "9568712356",
+      "EID": "pranavtelavane@gmail.com",
+      "Fname": "Pranav Telavane",
+      "password": "6566",
+      "ConPass": "6565",
+      "DOB": "2023-02-14T18:30:00.000Z",
+      "OnConFee": "",
+      "InConFee": "",
+      "isactive": false,
+      "id": 2
+    },
+    {
+      "MobNo": "9568712356",
+      "EID": "pranavtelavane@gmail.com",
+      "Fname": "Pranav Telavane",
+      "password": "65665",
+      "ConPass": "65665",
+      "DOB": "2023-02-13T18:30:00.000Z",
+      "OnConFee": "",
+      "InConFee": "",
+      "isactive": false,
+      "id": 3
+    },
+    {
+      "MobNo": "8756125522",
+      "EID": "pranavtelavane@gmail.com",
+      "Fname": "Pranav Telavane",
+      "password": "5612369",
+      "ConPass": "78956123",
+      "DOB": "2023-02-12T18:30:00.000Z",
+      "OnConFee": "700",
+      "InConFee": "1000",
+      "degreeform": [
+        {
+          "degree": "MBBS"
+        },
+        {
+          "degree": "MD"
+        }
+      ],
+      "isactive": false,
+      "id": 4
+    },
+    {
+      "MobNo": "9076415646",
+      "EID": "samita@gmail.com",
+      "Fname": "Samita Telavane",
+      "password": "pranav@123",
+      "ConPass": "pranav@123",
+      "DOB": "2023-02-16T18:30:00.000Z",
+      "OnConFee": "500",
+      "InConFee": "800",
+      "degreeform": [
+        {
+          "degree": "MBBS"
+        }
+      ],
+      "isactive": false,
+      "id": 5
+    },
+    {
+      "MobNo": "5698741236",
+      "EID": "jfjffjd@gmail.com",
+      "Fname": "Sanjay",
+      "password": "pranav@123",
+      "ConPass": "pranav@123",
+      "DOB": "2023-02-15T18:30:00.000Z",
+      "OnConFee": "",
+      "InConFee": "",
+      "degreeform": [],
+      "isactive": false,
+      "id": 6
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
