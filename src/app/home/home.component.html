@@ -71,6 +71,9 @@
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
 </table>
 
-<div style="text-align: center;" class="example-button-row">
+<div style="text-align: center;" class="example-button-row" *ngIf="show==true">
   <button mat-raised-button color="primary" (click)="LoadUser('s')">show more</button>
+</div>
+<div style="text-align: center;" class="example-button-row" *ngIf="show==false">
+  <button mat-raised-button color="primary" (click)="LoadUser('i')">show less</button>
 </div>

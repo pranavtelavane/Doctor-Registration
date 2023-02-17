@@ -21,6 +21,9 @@ this.LoadUser('i');
     if(i =='s'){
       this.show = false;
     }
+    else{
+      this.show = true
+    }
     this.service.GetAll().subscribe(res => {
       debugger
       this.userlist = res;
@@ -34,6 +37,7 @@ this.LoadUser('i');
     //  }
      console.log(this.deg)
       if(this.show == true){
+        this.list = [];
         for(var i=0; i<5;i++){
           this.list.push(this.userlist[i])
           // this.deg.push(this.userlist.degreeform[i])
