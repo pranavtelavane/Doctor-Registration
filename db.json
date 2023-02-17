@@ -1,35 +1,6 @@
 {
   "users": [
     {
-      "id": 1,
-      "title": "json-server",
-      "author": "typicode"
-    },
-    {
-      "MobNo": "9568712356",
-      "EID": "pranavtelavane@gmail.com",
-      "Fname": "Pranav Telavane",
-      "password": "6566",
-      "ConPass": "6565",
-      "DOB": "2023-02-14T18:30:00.000Z",
-      "OnConFee": "",
-      "InConFee": "",
-      "isactive": false,
-      "id": 2
-    },
-    {
-      "MobNo": "9568712356",
-      "EID": "pranavtelavane@gmail.com",
-      "Fname": "Pranav Telavane",
-      "password": "65665",
-      "ConPass": "65665",
-      "DOB": "2023-02-13T18:30:00.000Z",
-      "OnConFee": "",
-      "InConFee": "",
-      "isactive": false,
-      "id": 3
-    },
-    {
       "MobNo": "8756125522",
       "EID": "pranavtelavane@gmail.com",
       "Fname": "Pranav Telavane",
@@ -47,7 +18,7 @@
         }
       ],
       "isactive": false,
-      "id": 4
+      "id": 1
     },
     {
       "MobNo": "9076415646",
@@ -64,20 +35,101 @@
         }
       ],
       "isactive": false,
+      "id": 2
+    },
+    {
+      "MobNo": "6231578965",
+      "EID": "sanjaytelavane@gmail.com",
+      "Fname": "Sanjay Telavane",
+      "password": "sanjay@123",
+      "ConPass": "sanjay@123",
+      "DOB": "2023-02-15T18:30:00.000Z",
+      "OnConFee": "500",
+      "InConFee": "700",
+      "degreeform": [
+        {
+          "degree": "MBBS"
+        },
+        {
+          "degree": "MD"
+        }
+      ],
+      "isactive": false,
+      "id": 3
+    },
+    {
+      "MobNo": "6123789563",
+      "EID": "parth@gmail.com",
+      "Fname": "Parth Telavane",
+      "password": "parth@123",
+      "ConPass": "parth@123",
+      "DOB": "2023-02-22T18:30:00.000Z",
+      "OnConFee": "400",
+      "InConFee": "600",
+      "degreeform": [
+        {
+          "degree": "BHMS"
+        }
+      ],
+      "isactive": false,
+      "id": 4
+    },
+    {
+      "MobNo": "6987126359",
+      "EID": "swara@gmail.com",
+      "Fname": "Swara Telavane",
+      "password": "swara@123",
+      "ConPass": "swara@123",
+      "DOB": "2023-02-14T18:30:00.000Z",
+      "OnConFee": "900",
+      "InConFee": "1100",
+      "degreeform": [
+        {
+          "degree": "BAMS"
+        },
+        {
+          "degree": "MD"
+        }
+      ],
+      "isactive": false,
       "id": 5
     },
     {
-      "MobNo": "5698741236",
-      "EID": "jfjffjd@gmail.com",
-      "Fname": "Sanjay",
-      "password": "pranav@123",
-      "ConPass": "pranav@123",
-      "DOB": "2023-02-15T18:30:00.000Z",
-      "OnConFee": "",
-      "InConFee": "",
-      "degreeform": [],
+      "MobNo": "6987123015",
+      "EID": "tanmay@gmail.com",
+      "Fname": "Tanmay Telavane",
+      "password": "tanmay@123",
+      "ConPass": "tanmay@123",
+      "DOB": "2023-02-13T18:30:00.000Z",
+      "OnConFee": "500",
+      "InConFee": "600",
+      "degreeform": [
+        {
+          "degree": "BUMS"
+        }
+      ],
       "isactive": false,
       "id": 6
+    },
+    {
+      "MobNo": "6587123698",
+      "EID": "saisha@gmail.com",
+      "Fname": "Saisha Telavane",
+      "password": "saisha@123",
+      "ConPass": "saisha@123",
+      "DOB": "2023-02-07T18:30:00.000Z",
+      "OnConFee": "1000",
+      "InConFee": "1200",
+      "degreeform": [
+        {
+          "degree": "BHMS"
+        },
+        {
+          "degree": "MD"
+        }
+      ],
+      "isactive": false,
+      "id": 7
     }
   ],
   "comments": [

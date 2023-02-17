@@ -84,7 +84,7 @@ export class RegistractionComponent{
   }
   newskill(): FormGroup {
     return this.fb.group({
-      degree: ['']
+      degree: ['',Validators.compose([Validators.required,Validators.pattern('^[A-Za-z.]*$')])]
     })
   }
 

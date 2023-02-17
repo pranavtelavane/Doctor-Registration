@@ -10,7 +10,7 @@ export class HomeComponent {
 
 userlist:any
 displayedColumns: string[] = ['position', 'name', 'Email', 'Mobile','Date','onp','inp','degree'];
-  deg: any;
+  deg: any[]=[];
   show: boolean = true;
   list: any[]=[];
   constructor(private service : AuthService){
@@ -24,11 +24,21 @@ this.LoadUser('i');
     this.service.GetAll().subscribe(res => {
       debugger
       this.userlist = res;
-     
+    //  for(let i = 0; i<this.userlist.length;i++){
+    //   if(this.userlist[i]?.degreeform != undefined ){
+    //     for(let i=0;i<this.userlist[i]?.degreeform.length;i++){
+    //       this.deg.push(this.userlist.degreeform[i])
+    //     }
+    //   }
+      
+    //  }
+     console.log(this.deg)
       if(this.show == true){
         for(var i=0; i<5;i++){
           this.list.push(this.userlist[i])
+          // this.deg.push(this.userlist.degreeform[i])
         }  
+       
         
         this.userlist = [];
         this.userlist = this.list
