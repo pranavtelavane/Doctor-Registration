@@ -49,7 +49,12 @@
 
   <ng-container matColumnDef="Date">
     <th mat-header-cell *matHeaderCellDef>Date of Graduation</th>
-    <td mat-cell *matCellDef="let element">{{ element.DOB }}</td>
+    <td mat-cell *matCellDef="let element">{{ element.DOB | date }}</td>
+  </ng-container>
+
+  <ng-container matColumnDef="Exp">
+    <th mat-header-cell *matHeaderCellDef>Experience</th>
+    <td mat-cell *matCellDef="let element">{{ element.ExpYear }}</td>
   </ng-container>
 
   <ng-container matColumnDef="onp">

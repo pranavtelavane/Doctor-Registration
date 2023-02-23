@@ -9,7 +9,7 @@ import { AuthService } from '../service/auth.service';
 export class HomeComponent {
 
 userlist:any
-displayedColumns: string[] = ['position', 'name', 'Email', 'Mobile','Date','onp','inp','degree'];
+displayedColumns: string[] = ['position', 'name', 'Email', 'Mobile','Date','Exp','onp','inp','degree'];
   deg: any[]=[];
   show: boolean = true;
   list: any[]=[];
