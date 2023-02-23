@@ -64,7 +64,7 @@
 
   <ng-container matColumnDef="degree">
     <th mat-header-cell *matHeaderCellDef>Degree</th>
-    <td mat-cell *matCellDef="let element of userlist.degreeform">{{ element.degree}}</td>
+    <td mat-cell *matCellDef="let element; let i = index">{{ element.degreeform.degree}}</td>
   </ng-container>
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

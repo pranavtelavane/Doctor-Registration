@@ -33,7 +33,6 @@ this.LoadUser('i');
     //       this.deg.push(this.userlist.degreeform[i])
     //     }
     //   }
-      
     //  }
      console.log(this.deg)
       if(this.show == true){

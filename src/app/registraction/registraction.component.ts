@@ -10,6 +10,10 @@ import { AuthService } from '../service/auth.service';
   styleUrls: ['./registraction.component.css'],
 })
 export class RegistractionComponent{
+  // Tdate: Date;
+  Todate: string | null;
+  gradate: string;
+  todayDate = new Date();
   
   // degreeform: FormArray<any>;
   constructor(
@@ -45,6 +49,7 @@ export class RegistractionComponent{
     password: this.fb.control('',Validators.compose([Validators.required, Validators.pattern('^(?=.*?[A-Za-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{8,}$')])) ,
     ConPass: this.fb.control('',Validators.required),
     DOB: this.fb.control('',Validators.required),
+    ExpYear:this.fb.control(''),
     OnConFee: this.fb.control('',Validators.compose([Validators.required,Validators.pattern('^[0-9]*$')])),
     InConFee: this.fb.control('',Validators.compose([Validators.required,Validators.pattern('^[0-9]*$')])),
     degreeform: this.fb.array([]),
@@ -94,5 +99,17 @@ export class RegistractionComponent{
 
   removeskill(i: number) {
     this.degreeform.removeAt(i);
+  }
+  expyear(event:any){
+    debugger
+    const seledate = event.target.value
+    // todayDate = new Date();
+            let sentOnDate = new Date(seledate);
+            sentOnDate.setDate(sentOnDate.getDate());
+            let differenceInTime = this.todayDate.getTime() - sentOnDate.getTime();
+            let differenceInDays = Math.floor(differenceInTime / (1000 * 3600 * 24)); 
+            let fixed = Math.round(differenceInDays/365.25);
+            this.gradate = fixed.toString();
+            this.registractionform.controls['ExpYear'].setValue(this.gradate);
   }
 }
