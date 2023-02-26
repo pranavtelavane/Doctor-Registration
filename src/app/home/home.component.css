@@ -26,3 +26,6 @@
     border-collapse: separate!important;
     border-spacing:0 4px!important;
   }
+  .example-card{
+    display:inline-block;
+}

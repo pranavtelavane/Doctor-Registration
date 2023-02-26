@@ -7,28 +7,37 @@
         <h2 style="text-align: center;">Contact Information</h2>
       
     <form class="example-form" [formGroup]="registractionform">
-      <div style="text-align: center" class="example-button-row bottom-one">
-        <mat-form-field class="example-full-width">
+
+      <div class="match ">
+
+      <div  class="example-button-row bottom-one ">
+        <mat-form-field class="input">
           <mat-label>Mobile Number</mat-label>
-          <input matInput formControlName="MobNo" placeholder="" />
+          <input matInput formControlName="MobNo" placeholder="" size="50" />
+          <mat-error *ngIf="f.MobNo?.touched && f.MobNo?.errors?.required">Mobile number is Required </mat-error>
+          <mat-error *ngIf="f.MobNo?.touched && f.MobNo?.errors?.pattern">Mobile number must be 10 digit</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Email Address</mat-label>
           <input matInput formControlName="EID" placeholder="" />
+          <mat-error *ngIf="f.EID?.touched && f.EID?.errors?.required">Email Address is Required </mat-error>
+          <mat-error *ngIf="f.EID?.touched && f.EID?.errors?.pattern">Invalid Email Address</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Full Name</mat-label>
           <input matInput formControlName="Fname" placeholder="" />
+          <mat-error *ngIf="f.Fname?.touched && f.Fname?.errors?.required">Full Name is Required </mat-error>
+          <mat-error *ngIf="f.Fname?.touched && f.Fname?.errors?.pattern">Full Name should be in alphabetic</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Set Password</mat-label>
           <input
@@ -37,10 +46,12 @@
             formControlName="password"
             placeholder=""
           />
+          <mat-error *ngIf="f.password?.touched && f.password?.errors?.required">Password is Required </mat-error>
+          <mat-error *ngIf="f.password?.touched && f.password?.errors?.pattern">Password should be 8 digits and contain atleast 1 letter 1 number and 1 special character(eg.test@123)</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Confirm Password</mat-label>
           <input
@@ -52,7 +63,7 @@
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div  class="example-button-row bottom-one">
         <mat-form-field appearance="fill">
           <mat-label>Date of Graduation</mat-label>
           <input matInput [matDatepicker]="picker" formControlName="DOB" (dateChange)="expyear($event)" [max]="todayDate"/>
@@ -62,10 +73,11 @@
             [for]="picker"
           ></mat-datepicker-toggle>
           <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="f.DOB?.touched && f.DOB?.errors?.required">Date of Graduation is Required </mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <!-- <div style="text-align: center" class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Experience Year</mat-label>
           <input
@@ -75,9 +87,9 @@
             placeholder="" readonly
           />
         </mat-form-field>
-      </div>
+      </div> -->
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <div formArrayName="degreeform">
           <div *ngFor="let skill of degreeform.controls; let i = index">
             <div [formGroupName]="i">
@@ -92,21 +104,25 @@
           </button>
         </div>
       </div>
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>Online Consult Fee</mat-label>
           <input matInput formControlName="OnConFee" placeholder="" />
+          <mat-error *ngIf="f.OnConFee?.touched && f.OnConFee?.errors?.required">Online Consult Fee is Required </mat-error>
+          <mat-error *ngIf="f.OnConFee?.touched && f.OnConFee?.errors?.pattern">Online Consult Fee must be numeric</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div  class="example-button-row bottom-one">
         <mat-form-field class="example-full-width">
           <mat-label>In Person Consult Fee</mat-label>
           <input matInput formControlName="InConFee" placeholder="" />
+          <mat-error *ngIf="f.InConFee?.touched && f.InConFee?.errors?.required">In Person Consult Fee is Required </mat-error>
+          <mat-error *ngIf="f.InConFee?.touched && f.InConFee?.errors?.pattern">In Person Consult Fee must be numeric</mat-error>
         </mat-form-field>
       </div>
 
-      <div style="text-align: center" class="example-button-row bottom-one">
+      <div class="example-button-row bottom-one">
       <section>
         <div class="example-button-row">
           <button mat-raised-button color="primary" (click)="proceed()">
@@ -115,6 +131,7 @@
         </div>
       </section>
     </div>
+  </div>
     </form>
   </mat-card-content>
 </mat-card>

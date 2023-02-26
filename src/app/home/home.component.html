@@ -1,26 +1,31 @@
 <h1 style="text-align: center"><strong>Register a Doctor</strong></h1>
-<!-- <table mat-table [dataSource]="userlist" class="mat-elevation-z8">
-  <tr >
+
+
     <div class="main-div">
-      <mat-card class="card">
+      <mat-card class="card example-card" *ngFor="let data of userlist let i=index">
         <mat-card-header>
           <div mat-card-avatar>
             <img src="assets/images/profileimg.png" class="header-image"/>
           </div>
-          <mat-card-title>Pranav</mat-card-title>
+          <mat-card-title>Dr. {{data.Fname | uppercase}}</mat-card-title>
           <mat-card-subtitle>pt@123</mat-card-subtitle>
         </mat-card-header>
         <mat-card-content>
-          <p></p>
-          <p></p>
+          <p>{{data.ExpYear}}</p>
+          <p>₹ {{data.OnConFee}}:Online Consult</p>
+          <p>₹ {{data.InConFee}}:Inperson Consult</p>
+         
+            <p>{{data.degreeform}}</p>
+        </mat-card-content> 
+        <mat-card-content>
+         
+          <!-- <p>fees</p> -->
         </mat-card-content>
       </mat-card>
     </div>
-  </tr>
 
-</table> -->
 
-<table mat-table [dataSource]="userlist" class="mat-elevation-z8">
+<!-- <table mat-table [dataSource]="userlist" class="mat-elevation-z8">
  
 
   
@@ -74,11 +79,11 @@
 
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
-</table>
+</table> -->
 
-<div style="text-align: center;" class="example-button-row" *ngIf="show==true">
+<!-- <div style="text-align: center;" class="example-button-row" *ngIf="show==true">
   <button mat-raised-button color="primary" (click)="LoadUser('s')">show more</button>
 </div>
 <div style="text-align: center;" class="example-button-row" *ngIf="show==false">
   <button mat-raised-button color="primary" (click)="LoadUser('i')">show less</button>
-</div>
+</div> -->

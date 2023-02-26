@@ -1,3 +1,13 @@
 .bottom-three {
-    margin-bottom: 1cm;
+    margin-bottom: 2cm;
+ }
+ .match{
+    text-align: center;
+    width: 100%;
+ }
+ .mat-mdc-form-field-infix {
+    flex:auto;
+    width: 306;
+    position: fixed;
+    box-sizing: border-box;
  }

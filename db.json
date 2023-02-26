@@ -155,6 +155,27 @@
       ],
       "isactive": false,
       "id": 8
+    },
+    {
+      "MobNo": "6512378965",
+      "EID": "sanal@gmail.com",
+      "Fname": "Sanal",
+      "password": "sanal@123",
+      "ConPass": "sanal@123",
+      "DOB": "2001-02-07T18:30:00.000Z",
+      "ExpYear": "22",
+      "OnConFee": "500",
+      "InConFee": "900",
+      "degreeform": [
+        {
+          "degree": "MBBS"
+        },
+        {
+          "degree": "MD"
+        }
+      ],
+      "isactive": false,
+      "id": 9
     }
   ],
   "comments": [

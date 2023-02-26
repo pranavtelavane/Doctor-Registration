@@ -13,6 +13,7 @@ displayedColumns: string[] = ['position', 'name', 'Email', 'Mobile','Date','Exp'
   deg: any[]=[];
   show: boolean = true;
   list: any[]=[];
+  degreedata: any[]=[];
   constructor(private service : AuthService){
 this.LoadUser('i');
   }
@@ -27,13 +28,18 @@ this.LoadUser('i');
     this.service.GetAll().subscribe(res => {
       debugger
       this.userlist = res;
-    //  for(let i = 0; i<this.userlist.length;i++){
-    //   if(this.userlist[i]?.degreeform != undefined ){
-    //     for(let i=0;i<this.userlist[i]?.degreeform.length;i++){
-    //       this.deg.push(this.userlist.degreeform[i])
-    //     }
-    //   }
-    //  }
+     this.degreedata =this.userlist[0].degreeform
+     for(i=0;i<this.degreedata.length;i++){
+      this.deg.push(this.degreedata[i].degree)
+     }
+
+     console.log(this.deg)
+     for(let i = 0; i<this.userlist.length;i++){
+      this.degreedata =this.userlist[i].degreeform
+      // for(i=0;i<this.degreedata.length;i++){
+      //  this.deg.push(this.degreedata[i].degree)
+      // }
+     }
      console.log(this.deg)
       if(this.show == true){
         this.list = [];
