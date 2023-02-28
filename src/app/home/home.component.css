@@ -1,7 +1,7 @@
 .header-image {
   background-size: cover;
-  height: 40px;
-  width: 40px;
+  height: 100px;
+  width: 100px;
   border-radius: 50%;
   flex-shrink: 0;
   object-fit: cover;
@@ -22,10 +22,35 @@
 .bottom-three {
     margin-bottom: 2cm;
  }
- .mat-table {
-    border-collapse: separate!important;
-    border-spacing:0 4px!important;
-  }
+
   .example-card{
     display:inline-block;
+}
+
+.dis{
+  display: flex;
+}
+
+.match{
+  text-align: left;
+  width: 100%;
+}
+.card-container {
+  /*  not needed styles to reflect it */ 
+  /* background: blue; */
+  padding: 10px;
+  /* color: white; */
+  /* needed styles below */
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+}
+.content {
+  padding: 30px;
+}
+
+.content > mat-card {
+  width: 500px;
+  border: 1px solid #000;
+  margin-bottom: 20px;
 }

@@ -8,7 +8,7 @@
       
     <form class="example-form" [formGroup]="registractionform">
 
-      <div class="match ">
+      <div class="match">
 
       <div  class="example-button-row bottom-one ">
         <mat-form-field class="input">
@@ -66,7 +66,7 @@
       <div  class="example-button-row bottom-one">
         <mat-form-field appearance="fill">
           <mat-label>Date of Graduation</mat-label>
-          <input matInput [matDatepicker]="picker" formControlName="DOB" (dateChange)="expyear($event)" [max]="todayDate"/>
+          <input matInput [matDatepicker]="picker" formControlName="DOB" [max]="todayDate"/>
           <!-- <mat-hint>MM/DD/YYYY</mat-hint> -->
           <mat-datepicker-toggle
             matIconSuffix

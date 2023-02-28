@@ -11,3 +11,7 @@
     position: fixed;
     box-sizing: border-box;
  }
+ .mat-mdc-form-field{
+
+    width:50%;
+  }
