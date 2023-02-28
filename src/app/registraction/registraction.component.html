@@ -60,6 +60,8 @@
             formControlName="ConPass"
             placeholder=""
           />
+          <mat-error *ngIf="f.ConPass?.touched && f.ConPass?.errors?.required">Confirm Password is Required </mat-error>
+          <!-- <mat-error *ngIf="f.ConPass?.touched && registractionform.controls['password'].value != registractionform.controls['ConPass'].value"> Password is not Matched </mat-error> -->
         </mat-form-field>
       </div>
 
@@ -96,6 +98,8 @@
               <mat-form-field class="example-full-width">
                 Degree {{ i + 1 }}:
                 <input matInput formControlName="degree" />
+                <mat-error *ngIf="degreeform.controls[i].get('degree')?.touched && degreeform.controls[i].get('degree')?.errors?.required">Degree is required</mat-error>
+                <mat-error *ngIf="degreeform.controls[i].get('degree')?.touched && degreeform.controls[i].get('degree')?.errors?.pattern">Please enter valid Degree</mat-error>
               </mat-form-field>
             </div>
           </div>

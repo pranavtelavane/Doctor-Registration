@@ -54,7 +54,8 @@ export class RegistractionComponent{
     InConFee: this.fb.control('',[Validators.required,Validators.pattern('^[0-9]*$')]),
     degreeform: this.fb.array([]),
     isactive: this.fb.control(false),
-  });
+  },
+  );
 
   proceed() {
     this.submitted = true;
