@@ -22,7 +22,9 @@ export class RegistractionComponent{
     private toastr: ToastrService,
     private s: AuthService,
     private route: Router
-  ) {}
+  ) {
+    this.addskills()
+  }
 
  
 
